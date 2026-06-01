@@ -232,7 +232,7 @@ if (speech && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       speech.textContent = speechMessages[speechIndex];
       speech.classList.remove('is-changing');
     }, 260);
-  }, 4200);
+  }, 9000);
 }
 
 menuButton.addEventListener('click', () => {
