@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 112" role="img" aria-labelledby="title desc">
+  <title id="title">とうふ□のリベ活動案内所</title>
+  <desc id="desc">小さな木札風のサイトロゴ</desc>
+  <defs>
+    <linearGradient id="wood" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7deb8"/>
+      <stop offset="0.5" stop-color="#e9bd7d"/>
+      <stop offset="1" stop-color="#bf7a3e"/>
+    </linearGradient>
+    <filter id="shadow" x="-8%" y="-20%" width="116%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#352d28" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect x="10" y="12" width="500" height="88" rx="22" fill="url(#wood)" filter="url(#shadow)"/>
+  <rect x="22" y="24" width="476" height="64" rx="16" fill="#fff8eb" opacity=".9"/>
+  <rect x="30" y="32" width="460" height="48" rx="12" fill="none" stroke="#c98f55" stroke-width="2" stroke-dasharray="7 9" opacity=".7"/>
+  <circle cx="58" cy="56" r="8" fill="#d78951" opacity=".55"/>
+  <circle cx="462" cy="56" r="8" fill="#d78951" opacity=".55"/>
+  <text x="260" y="65" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="30" font-weight="800" fill="#1f3b4f" letter-spacing="1">
+    とうふ□のリベ活動案内所
+  </text>
+</svg>

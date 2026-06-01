@@ -82,9 +82,17 @@ img {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  width: min(280px, 46vw);
   color: var(--color-indigo-dark);
   font-weight: 800;
   text-decoration: none;
+}
+
+.brand img {
+  width: 100%;
+  height: auto;
 }
 
 .site-nav {
@@ -855,8 +863,7 @@ h3 {
   }
 
   .brand {
-    max-width: 13rem;
-    line-height: 1.45;
+    width: min(250px, 52vw);
   }
 
   .hero {

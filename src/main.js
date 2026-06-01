@@ -61,7 +61,9 @@ const app = document.querySelector('#app');
 
 app.innerHTML = `
   <header class="site-header">
-    <a class="brand" href="#" aria-label="${siteData.siteTitle} トップへ">${siteData.siteTitle}</a>
+    <a class="brand" href="#" aria-label="${siteData.siteTitle} トップへ">
+      <img src="/images/header-sign.svg" alt="${siteData.siteTitle}" width="520" height="112" />
+    </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">メニュー</button>
     <nav class="site-nav" id="site-nav" aria-label="ページ内ナビゲーション">
       <a href="#knowledge-library">ノウハウ図書館</a>
