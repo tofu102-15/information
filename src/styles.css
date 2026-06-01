@@ -357,7 +357,7 @@ h3 {
   transform-origin: 50% 92%;
   animation:
     catEnter 2.35s 0.52s ease-out forwards,
-    catCurious 0.9s 4.2s ease-in-out 1;
+    catCuriousLoop 6.2s 4.2s ease-in-out infinite;
 }
 
 .hero-tofu {
@@ -612,29 +612,10 @@ h3 {
 
 .closing {
   position: relative;
-  overflow: hidden;
   max-width: 1000px;
   margin: 0 auto clamp(48px, 7vw, 84px);
-  padding: clamp(30px, 6vw, 54px) clamp(18px, 5vw, 54px) clamp(72px, 8vw, 94px);
+  padding: clamp(30px, 6vw, 54px) clamp(18px, 5vw, 54px);
   text-align: center;
-}
-
-.closing > * {
-  position: relative;
-  z-index: 1;
-}
-
-.closing::after {
-  content: "";
-  position: absolute;
-  right: clamp(18px, 4vw, 48px);
-  bottom: -28px;
-  z-index: 2;
-  width: clamp(118px, 14vw, 170px);
-  height: clamp(118px, 14vw, 170px);
-  background: url("/images/tofu-cat-icon.png") center / contain no-repeat;
-  filter: drop-shadow(0 12px 22px rgba(53, 45, 40, 0.12));
-  pointer-events: none;
 }
 
 .site-footer {
@@ -756,15 +737,16 @@ h3 {
   }
 }
 
-@keyframes catCurious {
+@keyframes catCuriousLoop {
   0%,
+  78%,
   100% {
     transform: translateY(0) rotate(0deg);
   }
-  44% {
+  84% {
     transform: translateY(-2px) rotate(-2.2deg);
   }
-  70% {
+  91% {
     transform: translateY(1px) rotate(1deg);
   }
 }
@@ -892,18 +874,6 @@ h3 {
 
   .button {
     width: 100%;
-  }
-
-  .closing {
-    padding-bottom: 100px;
-  }
-
-  .closing::after {
-    right: 50%;
-    bottom: -22px;
-    width: 104px;
-    height: 104px;
-    transform: translateX(50%);
   }
 
   .info-card {
