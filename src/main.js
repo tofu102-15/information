@@ -97,7 +97,6 @@ app.innerHTML = `
           ${linkButton('#skill-market', 'スキルマーケットOnlineを見る')}
           ${linkButton('#events', 'オフ会を見る')}
         </div>
-        <p class="notice">${siteData.disclaimerText}<br />${siteData.loginNoticeText}</p>
       </div>
     </section>
 
