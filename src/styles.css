@@ -608,6 +608,31 @@ h3 {
   font-weight: 800;
 }
 
+.event-countdown {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0 0 14px;
+  border: 1px solid rgba(215, 137, 81, 0.35);
+  border-radius: 999px;
+  background: rgba(215, 137, 81, 0.12);
+  color: var(--color-indigo-dark);
+  padding: 7px 13px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.event-countdown.is-today {
+  background: var(--color-noren);
+  color: #fff;
+}
+
+.event-countdown.is-finished {
+  background: #f4eee5;
+  color: var(--color-text-muted);
+}
+
 .status {
   border-color: rgba(215, 137, 81, 0.35);
   background: rgba(215, 137, 81, 0.16);

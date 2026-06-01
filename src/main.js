@@ -166,6 +166,7 @@ app.innerHTML = `
         <div class="event-card__body">
           <span class="status">${siteData.event.status}</span>
           <p class="event-date">${siteData.event.date}</p>
+          <p class="event-countdown" data-event-date="2026-10-02">2026年10月2日まで あと--日</p>
           <h3>${siteData.event.title}</h3>
           <p>${siteData.event.description}</p>
           ${linkButton(siteData.event.url, 'イベント案内を見る', 'primary')}
@@ -211,6 +212,7 @@ app.innerHTML = `
 const menuButton = document.querySelector('.menu-button');
 const siteNav = document.querySelector('.site-nav');
 const speech = document.querySelector('.speech');
+const eventCountdown = document.querySelector('.event-countdown');
 const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
 
 const speechMessages = [
@@ -233,6 +235,24 @@ if (speech && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       speech.classList.remove('is-changing');
     }, 260);
   }, 9000);
+}
+
+if (eventCountdown) {
+  const targetDate = new Date(`${eventCountdown.dataset.eventDate}T00:00:00`);
+  const today = new Date();
+  const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const targetStart = new Date(targetDate.getFullYear(), targetDate.getMonth(), targetDate.getDate());
+  const daysLeft = Math.round((targetStart - todayStart) / 86400000);
+
+  if (daysLeft > 0) {
+    eventCountdown.textContent = `2026年10月2日まで あと${daysLeft}日`;
+  } else if (daysLeft === 0) {
+    eventCountdown.textContent = '本日開催です';
+    eventCountdown.classList.add('is-today');
+  } else {
+    eventCountdown.textContent = '開催終了しました';
+    eventCountdown.classList.add('is-finished');
+  }
 }
 
 menuButton.addEventListener('click', () => {
