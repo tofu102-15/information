@@ -621,13 +621,13 @@ h3 {
 
 .closing-character {
   position: absolute;
-  right: clamp(12px, 4vw, 42px);
-  bottom: -18px;
-  width: clamp(72px, 12vw, 128px);
+  left: 50%;
+  bottom: -34px;
+  width: clamp(110px, 14vw, 170px);
   aspect-ratio: 1;
   object-fit: contain;
   opacity: 0;
-  transform: translateY(26px) rotate(2deg);
+  transform: translateX(-50%) translateY(36px) rotate(2deg);
   transition:
     opacity 520ms ease,
     transform 520ms ease;
@@ -636,7 +636,7 @@ h3 {
 
 .closing.is-visible .closing-character {
   opacity: 0.9;
-  transform: translateY(0) rotate(0deg);
+  transform: translateX(-50%) translateY(0) rotate(0deg);
 }
 
 .site-footer {
