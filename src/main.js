@@ -194,8 +194,8 @@ app.innerHTML = `
       <h2 id="closing-title">気になる入口から、ゆっくりどうぞ。</h2>
       <div class="button-row button-row--center">
         ${linkButton(siteData.profileUrl, 'リベでプロフィールを見る', 'primary')}
-        ${linkButton(siteData.knowledgeArticles[0].url, 'ノウハウ図書館を見る')}
-        ${linkButton(siteData.skillServices[0].url, 'スキルマーケットOnlineを見る')}
+        ${linkButton(siteData.knowledgeCreatorUrl, 'ノウハウ図書館を見る')}
+        ${linkButton(siteData.skillSellerUrl, 'スキルマーケットOnlineを見る')}
       </div>
     </section>
   </main>

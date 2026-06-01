@@ -5,6 +5,8 @@ export const siteData = {
     'リベシティ会員「とうふ□」の個人活動案内ページです。ノウハウ図書館の記事、スキルマーケットOnlineの商品、オフ会・交流イベントをご紹介しています。',
   ownerName: 'とうふ□',
   profileUrl: 'https://libecity.com/user_profile/hJrySSLdjmRXLerRdSlwx23OJEx1',
+  knowledgeCreatorUrl: 'https://library.libecity.com/creators/hJrySSLdjmRXLerRdSlwx23OJEx1',
+  skillSellerUrl: 'https://skill.libecity.com/users/hJrySSLdjmRXLerRdSlwx23OJEx1/seller_achievement',
   heroImage: '/images/tofu-cat-hero.png',
   tofuImage: '/images/tofu-only.png',
   catImage: '/images/cat-only.png',
