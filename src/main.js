@@ -190,7 +190,6 @@ app.innerHTML = `
     </section>
 
     <section class="closing" aria-labelledby="closing-title">
-      <img class="closing-character" src="${siteData.iconImage}" alt="" width="2000" height="2000" loading="lazy" aria-hidden="true" />
       <p class="section-label">またのぞいてください</p>
       <h2 id="closing-title">気になる入口から、ゆっくりどうぞ。</h2>
       <div class="button-row button-row--center">
