@@ -355,7 +355,9 @@ h3 {
   width: 58%;
   height: 86%;
   transform-origin: 50% 92%;
-  animation: catEnter 2.35s 0.52s ease-out forwards;
+  animation:
+    catEnter 2.35s 0.52s ease-out forwards,
+    catCurious 0.9s 4.2s ease-in-out 1;
 }
 
 .hero-tofu {
@@ -479,10 +481,22 @@ h3 {
   min-height: 100%;
   flex-direction: column;
   padding: 24px;
+  transform: translateY(0);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .info-card--featured {
   border-color: rgba(215, 137, 81, 0.55);
+}
+
+.info-card:hover,
+.info-card:focus-within {
+  border-color: rgba(215, 137, 81, 0.72);
+  box-shadow: 0 20px 48px rgba(53, 45, 40, 0.12);
+  transform: translateY(-4px);
 }
 
 .info-card p,
@@ -597,10 +611,32 @@ h3 {
 }
 
 .closing {
+  position: relative;
+  overflow: hidden;
   max-width: 1000px;
   margin: 0 auto clamp(48px, 7vw, 84px);
   padding: clamp(30px, 6vw, 54px) clamp(18px, 5vw, 54px);
   text-align: center;
+}
+
+.closing-character {
+  position: absolute;
+  right: clamp(12px, 4vw, 42px);
+  bottom: -18px;
+  width: clamp(72px, 12vw, 128px);
+  aspect-ratio: 1;
+  object-fit: contain;
+  opacity: 0;
+  transform: translateY(26px) rotate(2deg);
+  transition:
+    opacity 520ms ease,
+    transform 520ms ease;
+  pointer-events: none;
+}
+
+.closing.is-visible .closing-character {
+  opacity: 0.9;
+  transform: translateY(0) rotate(0deg);
 }
 
 .site-footer {
@@ -719,6 +755,19 @@ h3 {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes catCurious {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  44% {
+    transform: translateY(-2px) rotate(-2.2deg);
+  }
+  70% {
+    transform: translateY(1px) rotate(1deg);
   }
 }
 
@@ -847,6 +896,10 @@ h3 {
     width: 100%;
   }
 
+  .closing {
+    padding-bottom: 96px;
+  }
+
   .info-card {
     padding: 20px;
   }
@@ -873,6 +926,18 @@ h3 {
   .hero-cat,
   .hero-tofu {
     transform: none;
+  }
+
+  .info-card,
+  .info-card:hover,
+  .info-card:focus-within {
+    transform: none;
+  }
+
+  .closing-character {
+    opacity: 0.9;
+    transform: none;
+    transition: none;
   }
 
   .speech {
