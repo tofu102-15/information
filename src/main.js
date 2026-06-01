@@ -210,7 +210,30 @@ app.innerHTML = `
 
 const menuButton = document.querySelector('.menu-button');
 const siteNav = document.querySelector('.site-nav');
+const speech = document.querySelector('.speech');
 const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
+
+const speechMessages = [
+  'いらっしゃいませ♪',
+  'ゆっくりしていってね♪',
+  '気になる入口からどうぞ',
+  '記事もサービスもご案内中です',
+  'とうふ□の活動をのぞいてみてね',
+];
+
+if (speech && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let speechIndex = 0;
+
+  window.setInterval(() => {
+    speechIndex = (speechIndex + 1) % speechMessages.length;
+    speech.classList.add('is-changing');
+
+    window.setTimeout(() => {
+      speech.textContent = speechMessages[speechIndex];
+      speech.classList.remove('is-changing');
+    }, 260);
+  }, 4200);
+}
 
 menuButton.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
