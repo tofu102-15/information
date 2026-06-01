@@ -223,23 +223,3 @@ siteNav.addEventListener('click', (event) => {
     siteNav.classList.remove('is-open');
   }
 });
-
-const closing = document.querySelector('.closing');
-
-if (closing && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const closingObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          closing.classList.add('is-visible');
-          closingObserver.disconnect();
-        }
-      });
-    },
-    { threshold: 0.35 },
-  );
-
-  closingObserver.observe(closing);
-} else {
-  closing?.classList.add('is-visible');
-}

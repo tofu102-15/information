@@ -619,24 +619,24 @@ h3 {
   text-align: center;
 }
 
-.closing-character {
-  position: absolute;
-  left: 50%;
-  bottom: -34px;
-  width: clamp(110px, 14vw, 170px);
-  aspect-ratio: 1;
-  object-fit: contain;
-  opacity: 0;
-  transform: translateX(-50%) translateY(36px) rotate(2deg);
-  transition:
-    opacity 520ms ease,
-    transform 520ms ease;
-  pointer-events: none;
+.closing > :not(.closing-character) {
+  position: relative;
+  z-index: 1;
 }
 
-.closing.is-visible .closing-character {
+.closing-character {
+  position: absolute;
+  right: clamp(18px, 4vw, 48px);
+  bottom: -8px;
+  z-index: 0;
+  width: clamp(98px, 13vw, 150px);
+  aspect-ratio: 1;
+  object-fit: contain;
   opacity: 0.9;
-  transform: translateX(-50%) translateY(0) rotate(0deg);
+  transform: translateY(0) rotate(0deg);
+  filter: drop-shadow(0 12px 22px rgba(53, 45, 40, 0.12));
+  pointer-events: none;
+  animation: closingPeek 0.75s 0.25s ease-out both;
 }
 
 .site-footer {
@@ -771,6 +771,17 @@ h3 {
   }
 }
 
+@keyframes closingPeek {
+  from {
+    opacity: 0;
+    transform: translateY(28px) rotate(2deg);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
 @keyframes speechIn {
   from {
     opacity: 0;
@@ -897,7 +908,14 @@ h3 {
   }
 
   .closing {
-    padding-bottom: 96px;
+    padding-bottom: 88px;
+  }
+
+  .closing-character {
+    right: 50%;
+    bottom: -12px;
+    width: 92px;
+    transform: translateX(50%);
   }
 
   .info-card {
@@ -936,8 +954,7 @@ h3 {
 
   .closing-character {
     opacity: 0.9;
-    transform: none;
-    transition: none;
+    animation: none;
   }
 
   .speech {
