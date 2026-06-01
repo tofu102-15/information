@@ -1,0 +1,65 @@
+export const siteData = {
+  siteTitle: 'とうふ□のリベ活動案内所',
+  browserTitle: 'とうふ□のリベ活動案内所｜ノウハウ図書館・スキルマーケットOnline・オフ会',
+  metaDescription:
+    'リベシティ会員「とうふ□」の個人活動案内ページです。ノウハウ図書館の記事、スキルマーケットOnlineの商品、オフ会・交流イベントをご紹介しています。',
+  ownerName: 'とうふ□',
+  profileUrl: 'https://libecity.com/user_profile/hJrySSLdjmRXLerRdSlwx23OJEx1',
+  heroImage: '/images/tofu-cat-hero.png',
+  tofuImage: '/images/tofu-only.png',
+  catImage: '/images/cat-only.png',
+  iconImage: '/images/tofu-cat-icon.png',
+  disclaimerText:
+    'このサイトは、リベシティ会員「とうふ□」による個人の活動案内ページです。リベシティ公式サイトではありません。',
+  loginNoticeText: '各リンク先の詳細閲覧には、リベシティへのログインが必要な場合があります。',
+  knowledgeArticles: [
+    {
+      title: '【見直し推奨】リベシティで「交流が広がる」プロフィールの3つのポイント',
+      description: 'プロフィールを見直したい方に向けた、交流が広がるポイントの案内です。',
+      url: 'https://library.libecity.com/articles/01KSH6M3DW552RK89FK215MEJ9',
+      thumbnail: '/images/thumb-profile.png',
+      isFeatured: true,
+      label: 'おすすめ',
+    },
+    {
+      title: '【入会2ヶ月以内】リベシティ「とうふ」の活動！よく聞かれる行動力への誤解',
+      description: 'リベシティ内での活動について、よく聞かれる内容をまとめた記事です。',
+      url: 'https://library.libecity.com/articles/01KFMEZXF1TFQTKYTTN55KGWH7',
+      thumbnail: '/images/thumb-proactive.png',
+      isFeatured: false,
+      label: '活動紹介',
+    },
+    {
+      title: '【知らないと損】リベポイントには有効期限あり｜失効させない活用法3選※4/22更新',
+      description: 'リベポイントの有効期限と、失効させない活用法を紹介する記事です。',
+      url: 'https://library.libecity.com/articles/01KD6TDBP8SWSG3D9HS875GWY7',
+      thumbnail: '/images/thumb-libe-point.png',
+      isFeatured: false,
+      label: 'リベポイント',
+    },
+  ],
+  skillServices: [
+    {
+      guideLabel: '相談サービス',
+      title: 'とうふ縁相談｜なんでも相談サービス',
+      description: 'リベシティ内で、ちょっと聞いてみたいことを相談できるサービスです。',
+      url: 'https://skill.libecity.com/services/32507',
+      thumbnail: '/images/thumb-tofu-service.png',
+    },
+    {
+      guideLabel: '制作サービス',
+      title: '「リベ用名刺」を制作します。',
+      description: 'リベシティ内で使う名刺づくりの入口として案内しているサービスです。',
+      url: 'https://skill.libecity.com/services/33158',
+      thumbnail: '/images/thumb-business-card.png',
+    },
+  ],
+  event: {
+    status: '開催予定',
+    date: '2026年10月2日',
+    title: '10/2「とうふ⬜️の日」イベント',
+    description: 'リベシティ内で開催予定の、とうふ□の交流イベント案内です。',
+    url: 'https://libecity.com/room_list?room_id=Q34FaEs7gDmkd1PAVJjR',
+    thumbnail: '/images/thumb-event.png',
+  },
+};
