@@ -166,7 +166,7 @@ app.innerHTML = `
         <div class="event-card__body">
           <span class="status">${siteData.event.status}</span>
           <p class="event-date">${siteData.event.date}</p>
-          <p class="event-countdown" data-event-date="2026-10-02">2026年10月2日まで あと--日</p>
+          <p class="event-countdown" data-event-date="2026-10-02T20:00:00">2026年10月2日まで あと--日 --時間 --分 --秒</p>
           <h3>${siteData.event.title}</h3>
           <p>${siteData.event.description}</p>
           ${linkButton(siteData.event.url, 'イベント案内を見る', 'primary')}
@@ -238,21 +238,34 @@ if (speech && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 }
 
 if (eventCountdown) {
-  const targetDate = new Date(`${eventCountdown.dataset.eventDate}T00:00:00`);
-  const today = new Date();
-  const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-  const targetStart = new Date(targetDate.getFullYear(), targetDate.getMonth(), targetDate.getDate());
-  const daysLeft = Math.round((targetStart - todayStart) / 86400000);
+  const targetDate = new Date(eventCountdown.dataset.eventDate);
 
-  if (daysLeft > 0) {
-    eventCountdown.textContent = `2026年10月2日まで あと${daysLeft}日`;
-  } else if (daysLeft === 0) {
-    eventCountdown.textContent = '本日開催です';
-    eventCountdown.classList.add('is-today');
-  } else {
-    eventCountdown.textContent = '開催終了しました';
-    eventCountdown.classList.add('is-finished');
-  }
+  const updateEventCountdown = () => {
+    const remaining = targetDate - new Date();
+
+    eventCountdown.classList.remove('is-today', 'is-finished');
+
+    if (remaining > 0) {
+      const days = Math.floor(remaining / 86400000);
+      const hours = Math.floor((remaining % 86400000) / 3600000);
+      const minutes = Math.floor((remaining % 3600000) / 60000);
+      const seconds = Math.floor((remaining % 60000) / 1000);
+
+      eventCountdown.textContent = `2026年10月2日まで あと${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`;
+    } else {
+      const now = new Date();
+      const isEventDay =
+        now.getFullYear() === targetDate.getFullYear() &&
+        now.getMonth() === targetDate.getMonth() &&
+        now.getDate() === targetDate.getDate();
+
+      eventCountdown.textContent = isEventDay ? '本日開催です' : '開催終了しました';
+      eventCountdown.classList.add(isEventDay ? 'is-today' : 'is-finished');
+    }
+  };
+
+  updateEventCountdown();
+  window.setInterval(updateEventCountdown, 1000);
 }
 
 menuButton.addEventListener('click', () => {

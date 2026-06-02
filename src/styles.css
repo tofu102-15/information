@@ -611,7 +611,10 @@ h3 {
 .event-countdown {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0 0.25em;
   width: fit-content;
+  max-width: 100%;
   margin: 0 0 14px;
   border: 1px solid rgba(215, 137, 81, 0.35);
   border-radius: 999px;
@@ -621,6 +624,7 @@ h3 {
   font-size: 0.95rem;
   font-weight: 800;
   line-height: 1.35;
+  text-wrap: balance;
 }
 
 .event-countdown.is-today {
