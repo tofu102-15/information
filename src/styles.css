@@ -8,8 +8,8 @@
   --color-wood: #c9a77b;
   --color-wood-light: #eadbc6;
   --color-accent: #d78951;
-  --color-noren: #f39a3d;
-  --color-noren-dark: #e4792f;
+  --color-noren: #ffa23a;
+  --color-noren-dark: #f07c24;
   --color-border: #e7dccb;
   --color-shadow: rgba(53, 45, 40, 0.08);
   color: var(--color-text);
@@ -352,14 +352,15 @@ h3 {
   height: 100%;
   border-right: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 1px 1px 9px 9px;
+  transform-origin: 50% 0;
   background:
-    linear-gradient(90deg, rgba(116, 56, 21, 0.08), transparent 22%, transparent 78%, rgba(116, 56, 21, 0.07)),
-    linear-gradient(180deg, #ff9f31 0%, var(--color-noren) 48%, var(--color-noren-dark) 100%);
+    linear-gradient(90deg, rgba(178, 86, 24, 0.05), transparent 24%, transparent 78%, rgba(178, 86, 24, 0.05)),
+    linear-gradient(180deg, #ffb34c 0%, var(--color-noren) 52%, var(--color-noren-dark) 100%);
   box-shadow:
-    inset 0 7px 9px rgba(255, 230, 183, 0.12),
-    inset 0 -18px 24px rgba(115, 52, 18, 0.08),
-    inset 1px 0 0 rgba(255, 255, 255, 0.12),
-    inset -1px 0 0 rgba(96, 46, 18, 0.06);
+    inset 0 7px 9px rgba(255, 239, 204, 0.16),
+    inset 0 -18px 24px rgba(177, 78, 20, 0.055),
+    inset 1px 0 0 rgba(255, 255, 255, 0.14),
+    inset -1px 0 0 rgba(130, 60, 18, 0.045);
 }
 
 .noren span:nth-child(odd)::before {
@@ -367,8 +368,8 @@ h3 {
   position: absolute;
   inset: 8px 42% 14px auto;
   width: 8%;
-  background: linear-gradient(90deg, transparent, rgba(255, 241, 205, 0.035), transparent);
-  opacity: 0.42;
+  background: linear-gradient(90deg, transparent, rgba(255, 245, 214, 0.055), transparent);
+  opacity: 0.36;
 }
 
 .noren span:nth-child(even)::before {
@@ -376,7 +377,7 @@ h3 {
   position: absolute;
   inset: 8px auto 14px 12%;
   width: 8%;
-  background: linear-gradient(90deg, transparent, rgba(87, 39, 15, 0.035), transparent);
+  background: linear-gradient(90deg, transparent, rgba(140, 66, 19, 0.03), transparent);
 }
 
 .noren span:nth-child(1) {
@@ -754,25 +755,31 @@ h3 {
 
 @keyframes clothLeft {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) skewX(0deg) scaleY(1);
   }
-  68% {
-    transform: translateX(-3.5px) rotate(-0.25deg);
+  46% {
+    transform: translateX(-4px) skewX(-1.4deg) scaleY(1.012);
+  }
+  72% {
+    transform: translateX(-2.4px) skewX(0.45deg) scaleY(0.996);
   }
   100% {
-    transform: translateX(-3px) rotate(-0.18deg);
+    transform: translateX(-3px) skewX(-0.18deg) scaleY(1);
   }
 }
 
 @keyframes clothRight {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) skewX(0deg) scaleY(1);
   }
-  68% {
-    transform: translateX(3.5px) rotate(0.25deg);
+  46% {
+    transform: translateX(4px) skewX(1.4deg) scaleY(1.012);
+  }
+  72% {
+    transform: translateX(2.4px) skewX(-0.45deg) scaleY(0.996);
   }
   100% {
-    transform: translateX(3px) rotate(0.18deg);
+    transform: translateX(3px) skewX(0.18deg) scaleY(1);
   }
 }
 
