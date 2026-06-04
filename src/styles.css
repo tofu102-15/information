@@ -402,13 +402,13 @@ h3 {
 .noren span:nth-child(2) {
   height: 97%;
   border-radius: 1px 1px 10px 8px;
-  animation: clothLeft 1.8s 0.25s ease-out both;
+  animation: clothLeft 0.72s cubic-bezier(0.2, 0.75, 0.25, 1) both;
 }
 
 .noren span:nth-child(3) {
   height: 98.5%;
   border-radius: 1px 1px 8px 10px;
-  animation: clothRight 1.8s 0.25s ease-out both;
+  animation: clothRight 0.72s cubic-bezier(0.2, 0.75, 0.25, 1) both;
 }
 
 .noren span:nth-child(4) {
@@ -753,28 +753,26 @@ h3 {
 }
 
 @keyframes clothLeft {
-  0%,
-  48% {
+  0% {
     transform: translateX(0);
   }
-  74% {
-    transform: translateX(-4px) rotate(-0.45deg);
+  68% {
+    transform: translateX(-3.5px) rotate(-0.25deg);
   }
   100% {
-    transform: translateX(-3px) rotate(-0.25deg);
+    transform: translateX(-3px) rotate(-0.18deg);
   }
 }
 
 @keyframes clothRight {
-  0%,
-  48% {
+  0% {
     transform: translateX(0);
   }
-  74% {
-    transform: translateX(4px) rotate(0.45deg);
+  68% {
+    transform: translateX(3.5px) rotate(0.25deg);
   }
   100% {
-    transform: translateX(3px) rotate(0.25deg);
+    transform: translateX(3px) rotate(0.18deg);
   }
 }
 
