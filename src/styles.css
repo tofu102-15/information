@@ -312,7 +312,6 @@ h3 {
   padding-top: 7px;
   filter: drop-shadow(0 8px 12px rgba(53, 45, 40, 0.08));
   transform-origin: top center;
-  animation: norenSway 2.2s ease-out both;
 }
 
 .noren::before {
@@ -383,12 +382,12 @@ h3 {
 
 .noren span:nth-child(2) {
   border-radius: 1px 1px 10px 8px;
-  animation: clothLeft 2.2s ease-out both;
+  animation: clothLeft 1.8s 0.25s ease-out both;
 }
 
 .noren span:nth-child(3) {
   border-radius: 1px 1px 8px 10px;
-  animation: clothRight 2.2s ease-out both;
+  animation: clothRight 1.8s 0.25s ease-out both;
 }
 
 .character-wrap {
@@ -727,38 +726,29 @@ h3 {
   margin-bottom: 8px;
 }
 
-@keyframes norenSway {
-  0% {
-    transform: rotate(0deg);
-  }
-  24% {
-    transform: rotate(-1.8deg);
-  }
-  52% {
-    transform: rotate(1.2deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 @keyframes clothLeft {
   0%,
-  36% {
+  48% {
     transform: translateX(0);
   }
+  74% {
+    transform: translateX(-4px) rotate(-0.45deg);
+  }
   100% {
-    transform: translateX(-7px) rotate(-1deg);
+    transform: translateX(-3px) rotate(-0.25deg);
   }
 }
 
 @keyframes clothRight {
   0%,
-  36% {
+  48% {
     transform: translateX(0);
   }
+  74% {
+    transform: translateX(4px) rotate(0.45deg);
+  }
   100% {
-    transform: translateX(7px) rotate(1deg);
+    transform: translateX(3px) rotate(0.25deg);
   }
 }
 
