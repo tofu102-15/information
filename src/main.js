@@ -106,7 +106,7 @@ app.innerHTML = `
       <div class="section-heading">
         <p class="section-label">店先のおすすめ</p>
         <h2 id="knowledge-title">ノウハウ図書館</h2>
-        <p>店先に並べるように、特に読んでいただきたい記事をご紹介します。</p>
+        <p>まず読んでいただきやすい記事を、3つだけ置いています。</p>
         <p class="section-note">※記事の続きの閲覧には、リベシティへのログインが必要な場合があります。</p>
       </div>
       <div class="card-grid">
@@ -179,10 +179,9 @@ app.innerHTML = `
       <div class="about-panel">
         <div>
           <p class="section-label">この案内所について</p>
-          <h2 id="about-title">とうふ□について</h2>
-          <p>とうふ□は、リベシティ内で記事の投稿、スキルマーケットOnlineでのサービス案内、交流イベントの開催を行っています。</p>
-          <p>ノウハウ図書館の記事から来ていただいた方、オフ会でお会いした方、プロフィールから見つけてくださった方へ。</p>
-          <p>リベシティ内で、気軽に交流していただけたらうれしいです。</p>
+          <h2 id="about-title">リベプロフィール</h2>
+          <p>詳しいプロフィールや最新の活動は、リベシティ内プロフィールにまとめています。</p>
+          <p>気になった方は、リベ内でのぞいていただけたらうれしいです。</p>
           <div class="button-row">
             ${linkButton(siteData.profileUrl, 'リベでプロフィールを見る', 'primary')}
           </div>
