@@ -179,11 +179,11 @@ app.innerHTML = `
       <div class="about-panel">
         <div>
           <p class="section-label">この案内所について</p>
-          <h2 id="about-title">リベプロフィール</h2>
+          <h2 id="about-title">とうふ□について</h2>
           <p>詳しいプロフィールや最新の活動は、リベシティ内プロフィールにまとめています。</p>
           <p>気になった方は、リベ内でのぞいていただけたらうれしいです。</p>
           <div class="button-row">
-            ${linkButton(siteData.profileUrl, 'リベでプロフィールを見る', 'primary')}
+            ${linkButton(siteData.profileUrl, 'とうふ□のプロフィールを見る', 'primary')}
           </div>
         </div>
         ${renderHeroImage(true)}
@@ -194,7 +194,7 @@ app.innerHTML = `
       <p class="section-label">またのぞいてください</p>
       <h2 id="closing-title">気になる入口から、ゆっくりどうぞ。</h2>
       <div class="button-row button-row--center">
-        ${linkButton(siteData.profileUrl, 'リベでプロフィールを見る', 'primary')}
+        ${linkButton(siteData.profileUrl, 'とうふ□のプロフィールを見る', 'primary')}
         ${linkButton(siteData.knowledgeCreatorUrl, 'ノウハウ図書館を見る')}
         ${linkButton(siteData.skillSellerUrl, 'スキルマーケットOnlineを見る')}
       </div>
