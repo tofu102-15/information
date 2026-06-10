@@ -118,7 +118,9 @@ app.innerHTML = `
                   <span class="tag">${article.label}</span>
                 </div>
                 <h3>${article.title}</h3>
-                <img class="article-thumb" src="${article.thumbnail}" alt="" width="1280" height="670" loading="lazy" />
+                <a class="thumb-link" href="${article.url}" ${externalAttrs} aria-label="${article.title}を画像から開く">
+                  <img class="article-thumb" src="${article.thumbnail}" alt="" width="1280" height="670" loading="lazy" />
+                </a>
                 <p>${article.description}</p>
                 ${cardLink(article.url, article.title)}
               </article>
@@ -145,7 +147,9 @@ app.innerHTML = `
                   <span class="tag tag--wood">${service.guideLabel}</span>
                 </div>
                 <h3>${service.title}</h3>
-                <img class="service-thumb" src="${service.thumbnail}" alt="" width="660" height="440" loading="lazy" />
+                <a class="thumb-link" href="${service.url}" ${externalAttrs} aria-label="${service.title}を画像から開く">
+                  <img class="service-thumb" src="${service.thumbnail}" alt="" width="660" height="440" loading="lazy" />
+                </a>
                 <p>${service.description}</p>
                 ${cardLink(service.url, service.title)}
               </article>
@@ -171,7 +175,9 @@ app.innerHTML = `
           <p>${siteData.event.description}</p>
           ${linkButton(siteData.event.url, 'イベント案内を見る', 'primary')}
         </div>
-        <img class="event-thumb" src="${siteData.event.thumbnail}" alt="10/2「とうふ⬜️の日」イベントの案内画像" width="1004" height="591" loading="lazy" />
+        <a class="thumb-link thumb-link--event" href="${siteData.event.url}" ${externalAttrs} aria-label="${siteData.event.title}を画像から開く">
+          <img class="event-thumb" src="${siteData.event.thumbnail}" alt="10/2「とうふ⬜️の日」イベントの案内画像" width="1004" height="591" loading="lazy" />
+        </a>
       </article>
     </section>
 

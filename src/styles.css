@@ -611,6 +611,17 @@ h3 {
   box-shadow: 0 10px 24px rgba(53, 45, 40, 0.06);
 }
 
+.thumb-link {
+  display: block;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.thumb-link:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
 .service-thumb {
   width: 100%;
   aspect-ratio: 3 / 2;
