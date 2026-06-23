@@ -24,7 +24,7 @@ export const siteData = {
       label: 'おすすめ',
     },
     {
-      title: '【入会2ヶ月以内】リベシティ「とうふ」の活動！よく聞かれる行動力への誤解',
+      title: '【行動力は才能じゃない】7年間動けなかった私が気づいた「小さな一歩」の力',
       description: 'リベシティ内での活動について、よく聞かれる内容をまとめた記事です。',
       url: 'https://library.libecity.com/articles/01KFMEZXF1TFQTKYTTN55KGWH7',
       thumbnail: '/images/thumb-proactive.png',
